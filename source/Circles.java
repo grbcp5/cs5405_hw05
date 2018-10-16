@@ -4,7 +4,7 @@
  * Grant Broadwater (grbcp5)
  * October 16, 2018
  *
- * Demo.java
+ * Circles.java
  */
 
 package code;
@@ -23,10 +23,10 @@ public class Circles extends Application implements ButtonSegmentControllerDataS
   public static final String REFERENCE_MENU_OPTION = "Reference";
   public static final String DEMOS_MENU_OPTION = "Demos";
   public static final String[] MENU_OPTION_TITLES = {
-    Demo.AUTHOR_MENU_OPTION, 
-    Demo.PROBLEM_MENU_OPTION,
-    Demo.REFERENCE_MENU_OPTION,
-    Demo.DEMOS_MENU_OPTION,
+    Circles.AUTHOR_MENU_OPTION, 
+    Circles.PROBLEM_MENU_OPTION,
+    Circles.REFERENCE_MENU_OPTION,
+    Circles.DEMOS_MENU_OPTION,
   };
 
   private ButtonSegmentController segmentController;
@@ -45,7 +45,7 @@ public class Circles extends Application implements ButtonSegmentControllerDataS
     System.out.println();
 
     System.out.println("Starting application.");
-    Demo.launch(args);
+    Circles.launch(args);
     System.out.println("Terminating application.");
 
   }
@@ -67,23 +67,23 @@ public class Circles extends Application implements ButtonSegmentControllerDataS
 
 
   public int getNumberOfSegments() {
-    return Demo.MENU_OPTION_TITLES.length;
+    return Circles.MENU_OPTION_TITLES.length;
   }
 
 
   public String getTitleForSegment(int segmentIndex) {
-    return Demo.MENU_OPTION_TITLES[segmentIndex];
+    return Circles.MENU_OPTION_TITLES[segmentIndex];
   }
 
 
   public Pane getPaneForSegment(String segmentTitle) {
-    if (segmentTitle.equals(Demo.AUTHOR_MENU_OPTION)) {
+    if (segmentTitle.equals(Circles.AUTHOR_MENU_OPTION)) {
       return this.authorPane;
-    } else if (segmentTitle.equals(Demo.PROBLEM_MENU_OPTION)) {
+    } else if (segmentTitle.equals(Circles.PROBLEM_MENU_OPTION)) {
       return this.problemPane;
-    } else if (segmentTitle.equals(Demo.REFERENCE_MENU_OPTION)) {
+    } else if (segmentTitle.equals(Circles.REFERENCE_MENU_OPTION)) {
       return this.referencePane;
-    } else if (segmentTitle.equals(Demo.DEMOS_MENU_OPTION)) {
+    } else if (segmentTitle.equals(Circles.DEMOS_MENU_OPTION)) {
       return this.demosPane;
     } else {
       return null;
